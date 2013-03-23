@@ -24,7 +24,7 @@
     <file path="/kohonenTests.html" changelist="469d6799-9cf0-495c-85c2-9c1664de03ba" time="1364078895954" ignored="false" />
     <file path="/tests.js" changelist="469d6799-9cf0-495c-85c2-9c1664de03ba" time="1364078912258" ignored="false" />
     <file path="/utils.js" changelist="469d6799-9cf0-495c-85c2-9c1664de03ba" time="1364078964662" ignored="false" />
-    <file path="/README" changelist="469d6799-9cf0-495c-85c2-9c1664de03ba" time="1364079326735" ignored="false" />
+    <file path="/README" changelist="469d6799-9cf0-495c-85c2-9c1664de03ba" time="1364080234718" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+            <state line="0" column="124" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -845,7 +845,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+        <state line="0" column="124" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
