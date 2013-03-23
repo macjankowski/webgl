@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>First example</title>
+		<meta charset="utf-8">
+		<script src="../../lib/webgl-debug.js"></script>
+		<script src="../../lib/glMatrix.js"></script>
+        <script src="../../lib/mac-utils.js"></script>
+		<script type="text/javascript" src="/src/kohonen/script.js"></script>
+        <!--<script type="text/javascript" src="points.js"></script>-->
+		<script id="shader-vs" type="x-shader/x-vertex">
+			attribute vec3 aVertexPosition;
+
+			uniform mat4 uMVMatrix;
+  			uniform mat4 uPMatrix;
+
+			void main() {
+				//gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+                gl_Position = vec4(aVertexPosition, 1.0);
+				gl_PointSize = 5.0;
+			}
+		</script>
+		<script id="shader-fs" type="x-shader/x-fragment">
+			precision mediump float;
+
+			void main() {
+				gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+			}
+		</script>
+
+        <script id="shader-fs-points" type="x-shader/x-fragment">
+            precision mediump float;
+
+            void main() {
+                gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+            }
+        </script>
+	</head>
+	<body onload="startup();">
+		<canvas id="myGLCanvas" width="500" height="500"></canvas>
+	</body>
+</html>
