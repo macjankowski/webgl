@@ -15,5 +15,11 @@ var graph = Graph.generateGraph()
 
 test( "test graph", function() {
 
-    equal(graph.vertices.length/3, 121, "Graph size is not ok");
+    equal(graph.vertices.length/3, 121, "Graph size is ok");
+    equal(graph.getByIndex(0).index, 0, "Found correct vertex");
+
+    for (var i=0; i<362; i+=3){
+        var foundVertex = graph.getByIndex(i)
+        equal(foundVertex.index, i, "Found correct vertex");
+    }
 });

@@ -35,3 +35,14 @@ function printMax(elems){
     }
     console.log("MAX IS "+max)
 }
+
+function printGraph(vertex) {
+
+    console.log(vertex.index+" = "+vertex.point)
+
+    for (var i = 0; i < vertex.neighbours.length; i++) {
+        var neighbour = vertex.neighbours[i]
+        printGraph(neighbour)
+    }
+
+}
