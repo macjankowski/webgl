@@ -15,5 +15,5 @@ var graph = Graph.generateGraph()
 
 test( "test graph", function() {
 
-    equal(graph.vertices.length/3, 10, "Graph size is not ok");
+    equal(graph.vertices.length/3, 121, "Graph size is not ok");
 });
