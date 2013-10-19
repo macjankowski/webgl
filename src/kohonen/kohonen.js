@@ -40,7 +40,7 @@ function setupShaders() {
 
 var graph
 var points = []
-var flattenPoints
+var flattenedPoints
 
 
 function setupBuffers() {
@@ -50,9 +50,9 @@ function setupBuffers() {
     graph = Graph.generateGraph()
     points = generatePoints()
     numberOfVertices = graph.vertices.length
-    flattenPoints = [].concat.apply([], points)
+    flattenedPoints = [].concat.apply([], points)
 
-    numberOfVerticesInPoints = flattenPoints.length
+    numberOfVerticesInPoints = flattenedPoints.length
 
     console.log("generated graph is: " + graph.vertices);
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
@@ -63,7 +63,7 @@ function setupBuffers() {
     gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
 
     gl.bindBuffer(gl.ARRAY_BUFFER, pointsBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(flattenPoints), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(flattenedPoints), gl.STATIC_DRAW);
     pointsBuffer.itemSize = 3;
     pointsBuffer.numberOfItems = numberOfVerticesInPoints / pointsBuffer.itemSize;
 
@@ -145,18 +145,7 @@ window.requestAnimFrame = (function () {
 })();
 
 
-function generatePoints() {
-    var points = []
 
-    for (var i = 0; i < 1000; i++) {
-        var p = []
-        p[0] = Math.random() * 2 - 1.0
-        p[1] = Math.random() * 2 - 1.0
-        p[2] = 0.0;
-        points.push(p)
-    }
-    return points
-}
 
 
 

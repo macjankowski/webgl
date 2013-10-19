@@ -22,4 +22,8 @@ test( "test graph", function() {
         var foundVertex = graph.getByIndex(i)
         equal(foundVertex.index, i, "Found correct vertex");
     }
+
+    var points =  generatePoints();
+    graph.kohonen(points);
+
 });

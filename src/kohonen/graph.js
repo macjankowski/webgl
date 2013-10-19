@@ -115,6 +115,18 @@ Graph.generateGraph = function generateGraph() {
     return  graph
 }
 
+Graph.prototype.calculateDistance = function (points) {
+    for (var i = 0; i < points.length; i++) {
+        var point = points[i]
+        var min = 1000
+        var closest = getClosest(this.firstVertex, point, this.firstVertex)
+        moveVertex(closest, point, 1)
+    }
+
+}
+
+
+
 Graph.prototype.kohonen = function (points) {
 
     var min = 1000

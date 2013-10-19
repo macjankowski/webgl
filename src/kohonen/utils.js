@@ -46,3 +46,16 @@ function printGraph(vertex) {
     }
 
 }
+
+function generatePoints() {
+    var points = []
+
+    for (var i = 0; i < 1000; i++) {
+        var p = []
+        p[0] = Math.random() * 2 - 1.0
+        p[1] = Math.random() * 2 - 1.0
+        p[2] = 0.0;
+        points.push(p)
+    }
+    return points
+}
